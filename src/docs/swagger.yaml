@@ -1,0 +1,1033 @@
+definitions:
+  api.AdminUserDataModel:
+    properties:
+      activeYears:
+        type: string
+      alreadySignIn:
+        type: boolean
+      careerName:
+        type: string
+      ci:
+        type: string
+      curseType:
+        type: string
+      email:
+        type: string
+      hasCloud:
+        type: boolean
+      hasEmail:
+        type: boolean
+      hasInternet:
+        type: boolean
+      hasVPN:
+        type: boolean
+      hasVc:
+        type: boolean
+      militancy:
+        type: string
+      name:
+        type: string
+      objectClass:
+        type: string
+      position:
+        type: string
+      salary:
+        type: string
+      scientificDegree:
+        type: string
+      serviceTime:
+        type: string
+      subArea:
+        type: string
+      subCategory:
+        type: string
+      vacations:
+        type: string
+    required:
+    - activeYears
+    - careerName
+    - ci
+    - curseType
+    - email
+    - hasCloud
+    - hasEmail
+    - hasInternet
+    - hasVPN
+    - hasVc
+    - militancy
+    - name
+    - objectClass
+    - position
+    - salary
+    - scientificDegree
+    - serviceTime
+    - subArea
+    - subCategory
+    - vacations
+    type: object
+  api.BlockUserData:
+    properties:
+      comment:
+        type: string
+      email:
+        type: string
+    type: object
+  api.ChangeEmailData:
+    properties:
+      currentEmail:
+        type: string
+      newEmail:
+        type: string
+    type: object
+  api.ChangePasswordModel:
+    properties:
+      newPassword:
+        type: string
+      oldPassword:
+        type: string
+    required:
+    - newPassword
+    - oldPassword
+    type: object
+  api.EditServicesStatusData:
+    properties:
+      hasCloud:
+        type: boolean
+      hasEmail:
+        type: boolean
+      hasInternet:
+        type: boolean
+      hasVideoConference:
+        type: boolean
+      hasVpn:
+        type: boolean
+    type: object
+  api.EmailQuotaResult:
+    properties:
+      consumed:
+        type: integer
+      quota:
+        type: integer
+    required:
+    - consumed
+    - quota
+    type: object
+  api.Error:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    required:
+    - code
+    - message
+    type: object
+  api.ForceChangePasswordModel:
+    properties:
+      email:
+        type: string
+      newPassword:
+        type: string
+    required:
+    - email
+    - newPassword
+    type: object
+  api.LoginCredentialsModel:
+    properties:
+      password:
+        type: string
+      user:
+        type: string
+    required:
+    - password
+    - user
+    type: object
+  api.ProxyQuotaResult:
+    properties:
+      bonus:
+        type: integer
+      consumed:
+        type: integer
+      quota:
+        type: integer
+    required:
+    - bonus
+    - consumed
+    - quota
+    type: object
+  api.Reset:
+    properties:
+      ci:
+        type: string
+      email:
+        type: string
+    type: object
+  api.ResetPasswordModel:
+    properties:
+      answers:
+        items:
+          type: string
+        type: array
+      ci:
+        type: string
+      email:
+        type: string
+      newPassword:
+        type: string
+      questions:
+        items:
+          type: string
+        type: array
+    required:
+    - answers
+    - ci
+    - email
+    - newPassword
+    - questions
+    type: object
+  api.ResetPasswordResult:
+    properties:
+      userId:
+        type: string
+    required:
+    - userId
+    type: object
+  api.RoleModel:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  api.SecurityQuestions:
+    properties:
+      questions:
+        items:
+          type: string
+        type: array
+    required:
+    - questions
+    type: object
+  api.SignUpModel:
+    properties:
+      answers:
+        items:
+          type: string
+        type: array
+      ci:
+        type: string
+      password:
+        type: string
+      questions:
+        items:
+          type: string
+        type: array
+    required:
+    - answers
+    - ci
+    - password
+    - questions
+    type: object
+  api.SignUpResult:
+    properties:
+      ou:
+        type: string
+      userId:
+        type: string
+    required:
+    - ou
+    - userId
+    type: object
+  api.StatusVPNResult:
+    properties:
+      enableVPN:
+        type: boolean
+      hasVPN:
+        type: boolean
+    type: object
+  api.TokensResult:
+    properties:
+      token:
+        type: string
+      tokenRefresh:
+        type: string
+    type: object
+  api.UserDataModel:
+    properties:
+      activeYears:
+        type: string
+      careerName:
+        type: string
+      ci:
+        type: string
+      curseType:
+        type: string
+      email:
+        type: string
+      hasCloud:
+        type: boolean
+      hasEmail:
+        type: boolean
+      hasInternet:
+        type: boolean
+      hasVPN:
+        type: boolean
+      hasVc:
+        type: boolean
+      militancy:
+        type: string
+      name:
+        type: string
+      objectClass:
+        type: string
+      position:
+        type: string
+      salary:
+        type: string
+      scientificDegree:
+        type: string
+      serviceTime:
+        type: string
+      subArea:
+        type: string
+      subCategory:
+        type: string
+      vacations:
+        type: string
+    required:
+    - activeYears
+    - careerName
+    - ci
+    - curseType
+    - email
+    - hasCloud
+    - hasEmail
+    - hasInternet
+    - hasVPN
+    - hasVc
+    - militancy
+    - name
+    - objectClass
+    - position
+    - salary
+    - scientificDegree
+    - serviceTime
+    - subArea
+    - subCategory
+    - vacations
+    type: object
+  api.UserDetailsModel:
+    properties:
+      accountsDetails:
+        items:
+          $ref: '#/definitions/api.AdminUserDataModel'
+        type: array
+      inSystem:
+        type: boolean
+    type: object
+  api.VPNProfile:
+    properties:
+      vpnProfile:
+        type: string
+    type: object
+host: identity.sic.uh.cu
+info:
+  contact:
+    email: nodo@uh.cu
+  description: Gestion UH API service for centralized user administration
+  title: Gestion UH API
+  version: "1.0"
+paths:
+  /admin/reset/workers:
+    post:
+      consumes:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Reset worker password
+      tags:
+      - Admin
+  /admin/roles:
+    get:
+      description: Get available roles.
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/api.RoleModel'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get available roles.
+      tags:
+      - Admin
+  /admin/user:
+    get:
+      consumes:
+      - application/json
+      description: GetUserInfo from user front the CI
+      parameters:
+      - description: CI of user to get info
+        in: query
+        name: ci
+        type: string
+      - description: UID of user to get info
+        in: query
+        name: uid
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.UserDetailsModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get User Info by CI.
+      tags:
+      - Admin
+  /admin/user/block:
+    post:
+      consumes:
+      - application/json
+      description: Disable all services and block user access
+      parameters:
+      - description: Data of the user to block
+        in: body
+        name: block
+        required: true
+        schema:
+          $ref: '#/definitions/api.BlockUserData'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "402":
+          description: Payment Required
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Block user
+      tags:
+      - Admin
+  /admin/user/changeEmail:
+    post:
+      consumes:
+      - application/json
+      description: Change user email, only if the new email are available
+      parameters:
+      - description: current email and the new email
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.ChangeEmailData'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Change user email
+      tags:
+      - Admin
+  /admin/user/changepassword:
+    post:
+      consumes:
+      - application/json
+      description: Change user password stored in LDAP server.
+      parameters:
+      - description: Account and new Password
+        in: body
+        name: newPassword
+        required: true
+        schema:
+          $ref: '#/definitions/api.ForceChangePasswordModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Change user password by admin
+      tags:
+      - Admin
+  /admin/user/createVPN:
+    post:
+      consumes:
+      - application/json
+      description: Create VPN of given user
+      parameters:
+      - description: CI of user to get VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.VPNProfile'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Create VPN of given user
+      tags:
+      - Admin
+  /admin/user/deleteVPN:
+    post:
+      consumes:
+      - application/json
+      description: Delete VPN of given user
+      parameters:
+      - description: CI of user to get VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Delete VPN of given user
+      tags:
+      - Admin
+  /admin/user/disableVPN:
+    post:
+      consumes:
+      - application/json
+      description: Disable VPN of given user
+      parameters:
+      - description: CI of user to disable VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Disable VPN of given user
+      tags:
+      - Admin
+  /admin/user/editServices:
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: patch data
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.EditServicesStatusData'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Edit user services status
+      tags:
+      - Admin
+  /admin/user/enableVPN:
+    post:
+      consumes:
+      - application/json
+      description: Enable VPN of given user
+      parameters:
+      - description: CI of user to enable VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Enable VPN of given user
+      tags:
+      - Admin
+  /admin/user/reset:
+    post:
+      consumes:
+      - application/json
+      description: Reset user and clear password
+      parameters:
+      - description: CI and Email of user to reset
+        in: body
+        name: reset
+        required: true
+        schema:
+          $ref: '#/definitions/api.Reset'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Reset user password.
+      tags:
+      - Admin
+  /admin/user/role:
+    post:
+      consumes:
+      - application/json
+      description: Set role to user with id user
+      parameters:
+      - description: email of the user
+        in: query
+        name: user
+        required: true
+        type: string
+      - description: roleId to assign
+        in: query
+        name: roleId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Set role to user
+      tags:
+      - Admin
+  /admin/user/statusVPN:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: CI of user to check VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.StatusVPNResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Check if the use has a VPN created
+      tags:
+      - Admin
+  /admin/user/unblock:
+    post:
+      consumes:
+      - application/json
+      description: Returns the access of the account to the user
+      parameters:
+      - description: Email of the user to unblock
+        in: query
+        name: email
+        required: true
+        type: string
+      responses:
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "402":
+          description: Payment Required
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Unblock user
+      tags:
+      - Admin
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Login into system with given credentials. Return two tokens, access
+        and refresh.
+      parameters:
+      - description: Credentials
+        in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/api.LoginCredentialsModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.TokensResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Login into system
+      tags:
+      - Authentication
+  /auth/refresh:
+    post:
+      description: Refresh access and refresh tokens
+      parameters:
+      - description: refresh token
+        in: query
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.TokensResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Refresh tokens
+      tags:
+      - Authentication
+  /auth/resetpassword:
+    post:
+      description: Reset password to removed user
+      parameters:
+      - description: Reset Password required data
+        in: body
+        name: resetPasswordData
+        required: true
+        schema:
+          $ref: '#/definitions/api.ResetPasswordModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResetPasswordResult'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Reset Password to user
+      tags:
+      - Authentication
+  /auth/signup:
+    post:
+      description: Sign up new user with CI. If user is already enabled, then error
+        is returned.
+      parameters:
+      - description: Sign up required data
+        in: body
+        name: signUpData
+        required: true
+        schema:
+          $ref: '#/definitions/api.SignUpModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.SignUpResult'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Sign up new user
+      tags:
+      - Authentication
+  /email/quota:
+    get:
+      description: Get email buzon quota
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.EmailQuotaResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get email buzon quota
+      tags:
+      - Email
+  /proxy/quota:
+    get:
+      description: Get Internet Quota Consumption
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ProxyQuotaResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get proxy quota
+      tags:
+      - Proxy
+  /securityquestions:
+    get:
+      description: Get available security questions.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.SecurityQuestions'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get security questions.
+      tags:
+      - Questions
+  /user/changepassword:
+    post:
+      consumes:
+      - application/json
+      description: Change user password stored in LDAP server.
+      parameters:
+      - description: Old and new password
+        in: body
+        name: newPassword
+        required: true
+        schema:
+          $ref: '#/definitions/api.ChangePasswordModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Change user password.
+      tags:
+      - User
+  /user/getVPN:
+    get:
+      consumes:
+      - application/json
+      description: Get VPN of given user
+      parameters:
+      - description: CI of user to get VPN
+        in: query
+        name: ci
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get VPN of given user
+      tags:
+      - Admin
+  /user/me:
+    get:
+      description: Get User Data.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.UserDataModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get User Data.
+      tags:
+      - userData
+  /user/search:
+    get:
+      description: Search user by CI
+      parameters:
+      - description: Text with the query data
+        in: query
+        name: text
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "404":
+          description: ""
+      summary: Search user by CI
+  /user/securityquestions:
+    get:
+      consumes:
+      - application/json
+      description: Get user stored security questions.
+      parameters:
+      - description: ci
+        in: query
+        name: ci
+        required: true
+        type: string
+      - description: email
+        in: query
+        name: ci
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.SecurityQuestions'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.Error'
+      summary: Get user security questions.
+      tags:
+      - Questions
+schemes:
+- http
+- https
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

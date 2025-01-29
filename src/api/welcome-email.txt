@@ -1,0 +1,7 @@
+"Subject: Bienvenido (a)  a la Universidad de La Habana.
+A sus 294 años de fundada es una de las instituciones más antiguas de nuestro país y abre sus puertas, como cada curso, para acoger nuevos estudiantes. Esta vez lo hacemos a través de las tecnologías digitales. Por favor, lea cuidadosamente las instrucciones que siguen.
+    1.- Le confirmamos que este es su correo institucional, el cual deberá utilizar para las gestiones a lo interno del centro.
+    2.- A partir del 18 de abril usted podrá acceder al Entorno Virtual de Enseñanza-Aprendizaje (EVEA), que es la plataforma interactiva de la Universidad de La Habana, usando el enlace https://evea.uh.cu y deberá:  
+        • Utilizar como nombre de usuario su dirección completa de correo (incluyendo el dominio, la parte del correo que va después del símbolo de la @), el mismo que está usted empleando ahora (%s).
+        • Utilizar como contraseña la que utilizó para su registro en https://sic.uh.cu.
+Ante cualquier duda en el registro, entrada y uso del sitio https://evea.uh.cu favor de contactar por la vía soporte@evea.uh.cu "

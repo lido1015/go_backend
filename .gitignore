@@ -1,0 +1,7 @@
+.vscode
+bin/*
+vendor
+.idea/*
+sic-conf.yaml
+/vpn_template.ovpn
+gestion_linux_amd64.bin
